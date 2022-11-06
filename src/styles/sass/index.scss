@@ -1,0 +1,310 @@
+$primary-color: #4b8eb0;
+$secondry-colo: #fede65;
+$primary-color-light: #85b2c9;
+$primary-color-dark: #12394D;
+$phone: 500px;
+$tablet: 700px;
+$semi-tablet:800px;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+body {
+  max-width: 100vw !important;
+}
+
+.nav-container {
+  @apply flex justify-between mx-14 my-8 items-center;
+}
+
+.nav-logo {
+  width: calc(7.1875rem + ((1vw - 14.4px) * 3.2864));
+  // @apply
+}
+.nav-button {
+  background: $primary-color;
+  font-size: calc(1.125rem + ((1vw - 14.4px) * 0.5634));
+  padding-left: calc(2rem + ((1vw - 14.4px) * 1.5023));
+  padding-right: calc(2rem + ((1vw - 14.4px) * 1.5023));
+  @apply text-white font-bold rounded-2xl py-1;
+}
+
+.main-container {
+  @media screen and (max-width: $tablet) {
+    @apply flex-col;
+  }
+  @apply flex flex-row justify-center items-center -mt-10 gap-4;
+}
+
+.main-img {
+  width: calc(31.25rem + ((1vw - 14.4px) * 22.2535));
+}
+.main-title {
+  font-size: calc(3.75rem + ((1vw - 14.4px) * 2.6291));
+  font-family: "Inter", sans-serif;
+  width: calc(39.6875rem + ((1vw - 14.4px) * 27.8873));
+  line-height: calc(4.5625rem + ((1vw - 14.4px) * 3.1925));
+  @apply font-bold;
+}
+
+.main-highlight {
+  background: $primary-color;
+  @apply text-white;
+}
+
+.service-container {
+  background-color: $primary-color;
+  padding-top: 41px;
+  @apply px-20 flex;
+  @media screen and (max-width: $tablet) {
+    @apply mt-10 px-20 py-6  
+  }
+  @media screen and (max-width: $phone) {
+    @apply px-10
+  }
+}
+
+.service-img {
+  width: calc(29.6875rem + ((1vw - 14.4px) * 16.4319));
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  
+}
+
+.service-title {
+  font-size: calc(3rem + ((1vw - 14.4px) * 2.2535));
+  @apply text-white font-bold;
+}
+
+.service-title-highlight {
+  @media screen and (max-width: $tablet) {
+    color: $primary-color;
+    @apply bg-white;
+  }
+}
+
+.service-subContainer {
+  @apply flex flex-col  justify-start;
+}
+
+.service-cardContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 20px;
+  // width: 65px;
+  max-width: calc(25.75rem + ((1vw - 14.4px) * 32.5822));
+  // max-width: 270px;
+  height:calc(13.25rem + ((1vw - 14.4px) * 2.0657));
+  max-height: calc(13.25rem + ((1vw - 14.4px) * 2.0657));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+  @media screen and (max-width:1112px) {
+    max-width: 400px;
+    @apply mx-2 mt-4;
+  }
+  @media screen and (max-width: $semi-tablet) {
+    min-width: 300px;
+    @apply mx-2 mt-4;
+  }
+  @media screen and (max-width: $phone) {
+    max-width: 65px !important;
+    max-width: fit-content;
+    height: 130px;
+    @apply mx-2 mt-6;
+  }
+  @apply shadow-md bg-white rounded-lg mx-4 
+ 
+}
+
+.service-cardTitle {
+  font-size:  calc(1.5rem + ((1vw - 14.4px) * 0.7042));
+  text-decoration-skip-ink: none;
+  @apply font-bold underline-offset-1 underline decoration-8 decoration-[#fede65] mb-2
+}
+
+.service-cardDesc{
+  // font-size: calc(1rem + ((1vw - 14.4px) * 0.1878));
+  font-size: calc(1rem + ((1vw - 14.4px) * 0.625));
+  @media screen and (max-width: $semi-tablet) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 10px;
+  }
+}
+.scrolling-wrapper{
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  @media screen and (max-width: $tablet) {
+   display: none;
+  }
+}
+
+.service-list{
+  display: none;
+  @media screen and (max-width: $tablet) {
+    @apply flex flex-col gap-4 ml-10 mt-2
+   }
+}
+
+.service-listItem{
+  @apply flex justify-start items-center gap-4
+}
+
+.service-listTitle{
+  font-size:18px;
+  @media screen and (max-width: $phone) {
+    font-size:14px;
+
+  }
+  @apply  font-semibold text-white
+}
+.why-container{
+  @media screen and (max-width: $tablet) {
+    @apply mx-10 gap-4 
+  }
+  @media screen and (max-width: $phone) {
+    @apply mx-6 gap-2
+  }
+  @apply flex flex-col mx-20 mt-10
+}
+
+.why-cardContainer{
+  width: calc(14.6875rem + ((1vw - 14.4px) * -6.4789));
+  @media screen and (max-width: $semi-tablet) {
+    @apply my-2
+  }
+  @media screen and (max-width: $phone) {
+    width: 150px;
+  }
+  @apply shadow-xl rounded-md  flex items-center flex-col my-10 py-6 border border-[0.6px];
+}
+
+.why-title{
+  background-color: $primary-color-light;
+  color: $primary-color-dark;
+  @media screen and (max-width: $semi-tablet) {
+    @apply mb-4
+  }
+  @media screen and (max-width: $tablet) {
+    @apply py-1 px-4 text-base mb-4
+  }
+  
+  @apply rounded-lg py-2 px-4 font-bold text-lg w-fit
+}
+
+.why-gridBox{
+  @media screen and (max-width:1177px) {
+    @apply flex flex-wrap gap-2 
+  }
+  @media screen and (max-width: $phone) {
+    @apply flex flex-wrap gap-1 
+  }
+  @apply grid grid-flow-col justify-evenly 
+}
+
+.why-cardTitle{
+  font-size: 20px;
+  @media screen and (max-width: $tablet) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 12px;
+  }
+  @apply font-bold 
+}
+
+.why-imgContainer{
+  // height: calc(10rem + ((1vw - 14.4px) * 1.5962));
+  height: 120px;
+  @media screen and (max-width: $phone) {
+    height: 80px;
+  }
+}
+
+.contactus-container{
+  background: $primary-color-light;
+  @media screen and (max-width: 1197px) {
+    @apply  px-10 py-10 mx-28
+}
+  @media screen and (max-width: 900px) {
+    @apply  px-6 py-10 mx-20 gap-6
+}
+  @media screen and (max-width: $tablet) {
+      @apply flex-col justify-center px-10 py-10 mx-20
+  }
+  @media screen and (max-width: $phone) {
+    @apply mx-10
+  }
+  @apply rounded-2xl flex  mx-48  py-10 px-28 gap-10  my-10 justify-center items-center
+
+}
+
+.contactus-imgContainer{
+  height:  calc(16.6875rem + ((1vw - 14.4px) * 8.6385)) !important;
+  width: calc(31.25rem + ((1vw - 14.4px) * 28.169)) !important;
+}
+
+.contactus-text{
+  font-size:calc(2.8125rem + ((1vw - 14.4px) * 1.8779));
+  @media screen and (max-width: 900px) {
+    @apply  ml-0
+}
+  @media screen and (max-width: $semi-tablet) {
+    font-size: 30px;
+    @apply ml-0 -mt-6
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 40px;
+    @apply ml-0 -mt-6
+  }
+  
+  @media screen and (max-width: $phone) {
+    font-size:20px;
+    @apply -mt-2
+  }
+  @apply font-bold text-white ml-10
+}
+
+.contactus-button{
+  @media screen and (max-width: 900px) {
+    @apply  ml-0
+}
+  @media screen and (max-width: $semi-tablet) {
+    @apply px-4 text-[12px] py-1 ml-0
+  }
+  @media screen and (max-width: $phone) {
+   @apply px-4 text-[12px]  mt-2
+  }
+
+  @apply text-white font-semibold border-2 py-2 px-10 mt-4 text-[20px] border-white  ml-10
+}
+
+// .contactus-subcontainer{
+//   @apply grid grid-flow-row justify-start w-fit
+// }
+
+// .contactus-img{
+//    width: calc(22.1875rem + ((1vw - 14.4px) * 12.6761));
+// }
+
+// .contactus-text{
+//   font-size:calc(3.75rem + ((1vw - 14.4px) * 2.8169));
+//   @apply font-bold text-white  w-3/4
+// }
+
+// .contactus-button{
+//   @apply place-self-start text-white font-semibold border-4 py-2 px-14 text-[20px]
+// }
