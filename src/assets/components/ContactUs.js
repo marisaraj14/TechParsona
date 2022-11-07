@@ -1,4 +1,4 @@
-import "../../index.scss";
+import "../../index.css";
 import CalculatorLady from "../media/callady.png";
 
 export const ContactUS = () => {
@@ -14,7 +14,7 @@ export const ContactUS = () => {
         </div>
         <div className="contactus-subcontainer">
           <p className="contactus-text">If you believe we are right for you</p>
-          <button className="contactus-button">Contact Us</button>
+          <a className="contactus-button" href="mailto:admin@techparsona.com">Contact Us</a>
         </div>
       </div>
     </>
